@@ -14,14 +14,14 @@ This is a Python-based project for optimizing articles within the website, which
 
 ## 如何使用?
 
-首先,定义文章主要内容在哪一个div里面,代码部分如下:
+首先,定义文章主要内容(正文)在哪一个div(容器)里面,代码部分如下:
 
 ```python
     product_main = soup.select_one('div.product-main') 
     # important, this is the main content of your post, make sure your main content inside this div
 ```
 
-div.product-main即为包含你文章所有的div
+div.product-main即为包含你文章所有内容的div
 
 接下来我们需要定义一些规则来过滤掉一些你不希望AI优化的部分:
 
@@ -38,9 +38,9 @@ div.product-main即为包含你文章所有的div
     )
 ```
 
-像我这个代码就是排除了div.main-content里面的div.product-div以及div.product-content两部分,然后包括文章内正文的h2,h3以及p标签内的内容,当然过滤了img.
+这个代码就是排除了div.main-content里面的div.product-div以及div.product-content两部分,然后包括文章内正文的h2,h3以及p标签内的内容,因为p标签部分嵌套img所以过滤掉了.
 
-然后你可以试试运行代码,首先他会要求你定义你post的文件夹以及输出文件夹(最好两个文件夹是在同一个磁盘里面的,不然容易报错):
+然后你可以试试运行代码,首先他会要求你定义你需要优化的文章的文件夹以及输出优化过文章的文件夹(最好两个文件夹是在同一个磁盘里面的,不然容易报错):
 
 ![1743413486467](image/README/1743413486467.png)
 
@@ -52,7 +52,7 @@ div.product-main即为包含你文章所有的div
 
 ![1743413736861](image/README/1743413736861.png)
 
-数组中是你需要优化的内容即可,接下来我们需要配置AI的模型和api_key:
+数组中是你需要优化的内容即可,接下来我们需要配置AI的模型和api_key，给到ai的指令以及转发地址等:
 
 代码如下:
 
