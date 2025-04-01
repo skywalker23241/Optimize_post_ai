@@ -87,3 +87,37 @@ div.product-main即为包含你文章所有内容的div
 ![1743414440098](image/README/1743414440098.png)
 
 目前仍然存在的问题: 部分文章数据验证不通过. 先更新这些吧!
+
+###### Tue Apr 1 15:10:38 CST 2025
+
+从我对网站文章的调试来看,目前部分文章数据验证不通过的问题是:
+
+1. ai过度优化,把一些重复的部分删除,合并等,感觉这也不能怪ai吧,也许修改tempreture可以减少这种情况的发生,也要看文章本身的质量怎么样了.
+
+2. 文章本身出现问题,导致解析或者优化完成的数据和ai优化过的数据不一致,这就要排查文章自己的问题了.
+
+这次的调试过程中错误的数组对比结果如下:
+
+Let's compare the two arrays and analyze the changes:
+
+    Removed redundant phrases: The second array has removed some redundant phrases, such as "It seems a little tricky in this case. Fortunately, you can quickly..." and "Tips: When it's your first time to use this program...". These phrases were not essential to the main content and were removed to make the text more concise.
+    Simplified step descriptions: The second array has simplified the step descriptions, making them more concise and easier to read. For example, Step 1 in the first array has two separate sentences, while in the second array, it's a single sentence.
+    Removed unnecessary HTML tags: The second array has removed some unnecessary HTML tags, such as <em> and <strong>, which were used for formatting. The remaining HTML tags are used only for essential formatting, such as links and bold text.
+    Combined similar steps: The second array has combined some similar steps, such as Step 4 in the first array, which had three separate sentences, while in the second array, it's a single step with four sub-steps.
+    Removed unnecessary sentences: The second array has removed some unnecessary sentences, such as "After that, restart your SQL Server service and then use the new SA password to connect to SQL Server 2012." This sentence was not essential to the main content and was removed to make the text more concise.
+
+By making these changes, the second array has reduced the number of elements from 24 to 19, making the text more concise and easier to read.
+
+Here's a summary of the changes:
+
+    Removed redundant phrases: 2
+    Simplified step descriptions: 4
+    Removed unnecessary HTML tags: 5
+    Combined similar steps: 1
+    Removed unnecessary sentences: 2
+
+Total changes: 14
+
+The remaining 5 elements were not changed or were modified only slightly.
+
+总的来说就是ai优化的有点过了.
