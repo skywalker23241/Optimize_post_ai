@@ -4,9 +4,9 @@ This is a Python-based project for optimizing articles within the website, which
 
 这是一个基于 Python 的项目，用于大规模优化网站内的文章。它可以自定义 AI 模型、提供 AI 指令、修改密度和最大 Token,支持数据验证等。作者创建此工具是为了提升工作效率，并希望能帮助他人。
 
-#### (**WARNING!** still in development!)
+## 安装依赖
 
-#### (**警告!** 功能不完善,仍在开发中!)
+python, openai库, beautfysoup库, 其他库可以自行安装.
 
 ###### Mon Mar 31 17:14:00 CST 2025
 
@@ -121,3 +121,9 @@ Total changes: 14
 The remaining 5 elements were not changed or were modified only slightly.
 
 总的来说就是ai优化的有点过了.
+
+###### Wed Apr 2 18:06:21 CST 2025
+
+发布release 1.0.0,然后如果数据验证不通过可以修改tempreture来减少ai过度优化的情况.
+
+完结.
